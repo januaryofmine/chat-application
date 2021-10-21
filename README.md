@@ -1,4 +1,9 @@
-# Chat-app
+<h1 align="center">
+  <br>
+  Chat Application
+  <br>
+</h1>
+
 
 > A real-time chat application built using React, Node.js, Express, and Socket.io which allows for communciation between multiple users inside of a chatroom
 
@@ -9,6 +14,7 @@
 - [Technologies](#technologies)
   - [Server](#server)
   - [Client](#client)
+- [Structure](#structure)
 - [Features](#features)
   - [To-do list](#to-do-list)
 - [Status](#status)
@@ -55,6 +61,15 @@ npm start
 - react-router-dom: ^5.3.0
 - socket.io-client: v4.3.2
 - tailwindcss: v2.2.17
+
+
+## Structure
+```
+root/
+└── 📔 client
+└── 📒 server
+└── README.md
+```
 
 ## Features
 
