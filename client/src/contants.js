@@ -1,3 +1,3 @@
 export const CONFIG = {
-    baseUrl: 'http://localhost:3008',
+    baseUrl: 'https://chat-application-z9.herokuapp.com',
 }
