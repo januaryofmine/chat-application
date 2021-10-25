@@ -25,6 +25,7 @@ export class ChatroomService {
         users: {
           $in: [listUsr],
         },
+        roomCode: roomCode
       }).sort({'createddAt': -1});
 
       return msgAll;

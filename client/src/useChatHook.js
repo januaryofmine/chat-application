@@ -12,15 +12,22 @@ const useChat = (roomCode) => {
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = socketIOClient(SOCKET_SERVER_URL, {
-      query: { roomCode },
-    });
+    socketRef.current = socketIOClient(
+      SOCKET_SERVER_URL,
+      {
+        withCredentials: true,
+        extraHeaders: { "Access-Control-Allow-Origin": "*" },
+      },
+      {
+        query: { roomCode },
+      }
+    );
 
     socketRef.current.on(RECEIVE_MESSAGE, (data) => {
       const incomingMessage = data.body;
       setMessages((message) => [incomingMessage]);
     });
-    
+
     return () => {
       socketRef.current.disconnect();
     };
@@ -28,7 +35,7 @@ const useChat = (roomCode) => {
 
   const sendMessage = (messageBody) => {
     socketRef.current.emit(SEND_MESSAGE, {
-      body: messageBody
+      body: messageBody,
     });
   };
 
