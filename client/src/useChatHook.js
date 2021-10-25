@@ -3,6 +3,7 @@ import socketIOClient from "socket.io-client";
 import { CONFIG } from "./contants";
 
 const SEND_MESSAGE = "send_message";
+const RECEIVE_MESSAGE = "receive_message";
 
 const SOCKET_SERVER_URL = CONFIG.baseUrl;
 
@@ -15,7 +16,7 @@ const useChat = (roomCode) => {
       query: { roomCode },
     });
 
-    socketRef.current.on('receive_message', (data) => {
+    socketRef.current.on(RECEIVE_MESSAGE, (data) => {
       const incomingMessage = data.body;
       setMessages((message) => [incomingMessage]);
     });
