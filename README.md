@@ -5,7 +5,7 @@
 </h1>
 
 
-> A real-time chat application built using React, Node.js, Express, and Socket.io which allows for communciation between multiple users inside of a chatroom
+> A real-time chat application built using React, Nestjs, MongoDB, and Socket.io which allows for communciation between multiple users inside of a chatroom
 
 ## Table of contents
 
