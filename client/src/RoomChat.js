@@ -54,10 +54,11 @@ const RoomChat = (props) => {
         <MainContainer>
           <ChatContainer>
             <MessageList>
-              {dataMsg.map((item, idenx) => {
+              {dataMsg.map((item, index) => {
                 return (
                   <div key={item.id}>
                     <a
+                    href="#/"
                       className={
                         item.sender === sender
                           ? "cs-message cs-message--outgoing cs-message__sender-name"

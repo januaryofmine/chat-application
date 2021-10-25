@@ -77,7 +77,7 @@ const JoinRoom = () => {
       </div>
       <div className="absolute top-5 left-20">
           <p className="font-bold">List rooms (copy here)</p>
-          <ul class="list-none">
+          <ul className="list-none">
             <li>xPs28qw</li>
             <li>PiSqkj2</li>
             <li>8TrSpwM</li>        
