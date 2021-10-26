@@ -19,9 +19,7 @@ const RoomChat = (props) => {
   const [dataMsg, setDataMsg] = useState([]);
 
   useEffect(() => {
-    axios.get(`${CONFIG.baseUrl}/chatroom/${roomCode}`, {
-      headers: {"Access-Control-Allow-Origin": "*"}
-    }).then((res) => {
+    axios.get(`${CONFIG.baseUrl}/chatroom/${roomCode}`).then((res) => {
       const newArr = [...res.data, ...messages];
       setDataMsg(newArr);
     });

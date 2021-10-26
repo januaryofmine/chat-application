@@ -10,6 +10,7 @@ import { ChatroomModule } from './modules/chatroom/chatroom.module';
   imports: [
     MongooseModule.forRoot(
       `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_URL}/${process.env.DB_NAME}?retryWrites=true&w=majority`,
+      // `mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.DB_URL}:${process.env.DB_PORT}/${process.env.DB_NAME}`,
     ),
     ChatroomModule,
   ],

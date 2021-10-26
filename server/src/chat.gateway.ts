@@ -8,7 +8,14 @@ import {
 import { Server, Socket } from 'socket.io';
 import { ChatroomService } from './modules/chatroom/chatroom.service';
 
-@WebSocketGateway({ cors: true })
+@WebSocketGateway({
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: '*',
+    credentials: true,
+  },
+})
 export class ChatGateway {
   @WebSocketServer()
   server: Server;
@@ -29,7 +36,7 @@ export class ChatGateway {
     @ConnectedSocket() socket: Socket,
     @MessageBody() data: any,
   ) {
-    console.log(data)
+    console.log(data);
     if (socket) {
       const messages = await this.chatService.getMessageRoom(
         data.body.roomCode,

@@ -16,8 +16,6 @@
   - [Client](#client)
 - [Structure](#structure)
 - [Features](#features)
-  - [To-do list](#to-do-list)
-- [Status](#status)
 
 ## General info
 

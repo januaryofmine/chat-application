@@ -15,10 +15,6 @@ const useChat = (roomCode) => {
     socketRef.current = socketIOClient(
       SOCKET_SERVER_URL,
       {
-        withCredentials: true,
-        extraHeaders: { "Access-Control-Allow-Origin": "*" },
-      },
-      {
         query: { roomCode },
       }
     );
